@@ -6,3 +6,24 @@
 #veneno{
     background-color: #A43E9E;
 }
+th{
+    color:green;
+    padding-right: 20px;
+}
+#imgDetalles{
+    width: 50%;
+}
+
+#detalles{
+    margin-top: 100px;
+}
+
+/*Ignorar*/
+
+nav{
+    background-color: #313030;
+}
+
+#btnLupa{
+    background-color: #CA0000;
+}
