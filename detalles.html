@@ -4,38 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POKEMON - Detalles</title>
+    <title>Pokémon - Detalles</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="./pokemon.css">
+
+    <!--TIPOGRAFÍA "JOCKEY ONE"-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+    </style>
+
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-success">
+<body class="fondoPlanta">
 
     <!--MENÚ DE NAVEGACIÓN-->
-    <nav class="navbar fixed-top p-4">
-        <div class="container-fluid d-flex justify-content: space-around">
+    <nav class="navbar fondoNegroEstandar sombreado fixed-top p-4">
+        <div class="container-fluid d-flex">
             
-            <!--LOGO POKÉDEX-->
+            <!--Logo Pokédex-->
             <div class="ms-4">
                 <img src="./img/LogoPokedex.png" style="width:300px;" alt="Logo Pokédex">
             </div>
 
-            <!--BARRA DE BÚSQUEDA-->
+            <!--Barra de búsqueda-->
             <div class="envoltorioBusqueda w-50" >
                 <form class="input-box d-flex">
                     <input type="text" class="form-control input w-75 rounded-5 border-0 py-2 px-3" placeholder="Introduce nombre o número">
-                    <button type="submit" id="btnLupa" class="btn btn-primary rounded-5 ms-1 border-0"><i class="bi bi-search"></i></button>                
+                    <button type="submit" class="btn btn-primary fondoRojo rounded-5 ms-1 border-0"><i class="bi bi-search"></i></button>                
                 </form>
             </div>
 
-            <!--OFFCANVAS-->
+            <!--Offcanvas-->
             <div class="me-4">
 
                 <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -59,82 +63,94 @@
         </div>
     </nav>
 
-    <div id="detalles" class="container-fluid row">
-        <div class="col-sm-6">
-            <div class="text-center">
-                <img src="./img/imgPredeterminada.png" alt="imgPokemon" id="imgDetalles">
-                <p class="text-light m-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse perferendis
-                    quam tempora obcaecati, velit
-                    non impedit blanditiis tempore debitis qui voluptate quasi corporis. Quod, velit recusandae porro
-                    quidem
-                    ipsa inventore.</p>
+    <!--CUERPO PRINCIPAL-->
+    <div class="d-flex">
+
+        <!--Columna izquierda-->
+        <div class="container m-0 p-0 h-auto fondoRojo rounded-5" style="width: 8px;"></div>
+        <div class="container m-0 p-0 h-auto fondoNegroEstandar rounded-5" style="width: 8px;"></div>
+        <div class="container m-0 p-0 h-auto fondoGrisClaro rounded-5" style="width: 8px;"></div>
+
+        <!--Cuerpo de la página-->
+        <div class="container w-100 d-flex flex-wrap justify-content-around mt-5 mb-5 pb-4" style="margin-top: 130px !important;">
+            
+            <!--Imagen y descripción-->
+            <div class="container w-50 d-flex justify-content-center flex-wrap">
+                <div class="w-100 d-flex justify-content-center">
+                    <img src="./img/imgBulbasaur.png" style="width: 400px;" alt="imgPokemon" id="imgDetalles">
+                </div>
+                <div class="w-100">
+                    <h3 class="text-white m-3 jockey-one-regular">
+                        Desde que nace, crece alimentándose de los nutrientes que contiene la semilla de su lomo.
+                    </h3>
+                </div>
             </div>
 
+            <!--Información-->
+            <div class="container w-50 d-flex justify-content-center flex-wrap">
+                <!--Nombre y número-->
+                <div class="container w-100 d-flex flex-wrap justify-content-between jockey-one-regular" style="height: 15%">
+                    <h1 class="text-white text-uppercase me-5" style="font-size: 60px;">Bulbasaur</h1>
+                    <h1 class="text-white ms-5" style="font-size: 60px;">#0001</h1>
+                </div>
+
+                <!--Características-->
+                <div class="container bg-white rounded-4" style="height: 85%">
+                    <!--Categoría y Tipos-->
+                    <div class="container d-flex flex-wrap p-4">
+                        <div style="width: 45%;"><h2 class="jockey-one-regular" style="color: #707266">Pokémon Semilla</h2></div>
+                        <div class="w-25">
+                            <div class="px-3 me-2 rounded-5 fondoPlanta jockey-one-regular">
+                                <h5 class="text-light text-center mt-1 p-1" id="planta">Planta</h5>
+                            </div>
+                        </div>
+                        <div class="w-25">
+                            <div class="px-3 ms-2 rounded-5 fondoVeneno jockey-one-regular">
+                                <h5 class="text-light text-center mt-1 p-1" id="veneno">Veneno</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Peso, Altura y Habilidad-->
+                    <div class="container d-flex flex-wrap justify-content-center jockey-one-regular">
+                        <div style="width: 30%;"><h2><i class="bi bi-box-seam-fill"></i> Peso</h2></div>
+                        <div style="width: 30%;"><h2><i class="bi bi-rulers"></i> Altura</h2></div>
+                        <div style="width: 30%;"><h2><i class="bi bi-star-fill"></i> Habilidad</h2></div>
+                    </div>
+                    <div class="container d-flex flex-wrap justify-content-center gris">
+                        <div style="width: 30%;"><h2>6,9 kg</h2></div>
+                        <div style="width: 30%;"><h2>0,7 m</h2></div>
+                        <div style="width: 30%;"><h2>Espesura</h2></div>
+                    </div>
+
+                    <div class="mt-5 jockey-one-regular">
+                        <h2 class="ms-4 ps-3"><i class="bi bi-bar-chart-line-fill"></i> Estadísticas</h2>
+                    </div>
+
+                    <div class="container d-flex m-2 mt-3 mb-3">
+                        <div class="w-50 mx-4 d-flex justify-content-center flex-column">
+                            <div><h2 class="gris"><span class="jockey-one-regular planta">HP:</span> 78</h2></div>
+                            <div><h2 class="gris"><span class="jockey-one-regular planta">ATK:</span> 84</h2></div>
+                            <div><h2 class="gris"><span class="jockey-one-regular planta">DEF:</span> 78</h2></div>
+                        </div>
+                        <div class="w-50 mx-4 d-flex justify-content-center flex-column">
+                            <div><h2 class="gris"><span class="jockey-one-regular planta">SP ATK:</span> 109</h2></div>
+                            <div><h2 class="gris"><span class="jockey-one-regular planta">SP DEF:</span> 85</h2></div>
+                            <div><h2 class="gris"><span class="jockey-one-regular planta">SPD:</span> 100</h2></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
 
-        <div class="col-sm-6">
-            <div class="row text-end">
-                <h1 class="col-3 text-light">Bulbasaur</h1>
-                <h1 class="col-3 text-light">#0001</h1>
-            </div>
-            <div class="h-100 p-5 m-5 bg-body-tertiary border rounded-3">
-                <div class="row">
-                    <h6 class="col-3">Pokemon Semilla</h6>
-                    <span class="badge text-bg-success rounded-pill col-3 me-3" id="planta">Planta</span>
-                    <span class="badge text rounded-pill col-3" id="veneno">Veneno</span>
-                </div>
-    
-                <div class="row">
-                    <h5 class="col-3"><i class="bi bi-box-seam-fill"></i>Peso</h5>
-                    <h5 class="col-3"><i class="bi bi-rulers"></i>Altura</h5>
-                    <h5 class="col-3"><i class="bi bi-star-fill"></i>Habilidad</h5>
-                </div>
-                <div class="row">
-                    <p class="col-3">6.9KG</p>
-                    <p class="col-3">0.7m</p>
-                    <p class="col-3">Espesura</p>
-                </div>
-    
-                <table>
-                    <tr>
-                        <th>HP</th>
-                        <td>78</td>
-                    </tr>
-                    <tr>
-                        <th>ATK</th>
-                        <td>84</td>
-                    </tr>
-                    <tr>
-                        <th>DEF</th>
-                        <td>78</td>
-                    </tr>
-                    <tr>
-                        <th>SP ATK</th>
-                        <td>109</td>
-                    </tr>
-                    <tr>
-                        <th>SP DEF</th>
-                        <td>85</td>
-                    </tr>
-                    <tr>
-                        <th>SPD</th>
-                        <td>100</td>
-                    </tr>
-    
-    
-    
-    
-    
-    
-                </table>
-            </div>
-        </div>
-        
+        <!--Columna derecha-->
+        <div class="container m-0 p-0 h-auto fondoGrisClaro rounded-5" style="width: 8px;"></div>
+        <div class="container m-0 p-0 h-auto fondoNegroEstandar rounded-5" style="width: 8px;"></div>
+        <div class="container m-0 p-0 h-auto fondoRojo rounded-5" style="width: 8px;"></div>
+
     </div>
-
-
-
+    
 </body>
-
 </html>
