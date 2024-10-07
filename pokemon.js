@@ -20,8 +20,8 @@ $(document).ready(function () {
                 <div class="container d-flex justify-content-between card-body rounded-4 mt-1 px-2 fondoNegroEstandar sombreado">
                     <!--Número y nombre-->
                     <div class="ms-2">
-                        <p class="card-number m-0 mb-1" style="color: #C9C9C9">${pokemonId}</p>
-                        <h4 class="card-title blanco m-0">${pokemon.name}</h4>
+                        <p class="card-number m-0 mb-1" style="color: #C9C9C9">#00${pokemonId}</p>
+                        <h4 class="card-title blanco m-0 text-capitalize">${pokemon.name}</h4>
                     </div>
                 </div>
 
@@ -30,6 +30,4 @@ $(document).ready(function () {
         });
       });
     }
-  // var template = `<p><a href="detail.html?pid=${pokemonId}"><h1 class="pokemon" pokemonid="1">${pokemon.name}</h1><img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/${pokemonId}.png"</a></p>`;
-
   });
