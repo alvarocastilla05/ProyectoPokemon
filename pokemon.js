@@ -1,6 +1,6 @@
 $(document).ready(function () {
     getPokemonListV1();
-  
+
     function getPokemonListV1() {
       $.ajax({
         url: "https://pokeapi.co/api/v2/pokemon",
