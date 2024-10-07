@@ -1,15 +1,17 @@
 $(document).ready(function () {
+
     getPokemonListV1();
+    cambiarEsquemaColores();
 
     function getPokemonListV1() {
       $.ajax({
         url: "https://pokeapi.co/api/v2/pokemon",
         method: "GET",
       }).done(function (resp) {
-        var listadoPomemon = resp.results;
+        let listadoPomemon = resp.results;
         listadoPomemon.forEach(function (pokemon) {
-            var pokemonId = pokemon.url.split("/")[6];
-            var template = `<div class="card border-0 jockey-one-regular mx-3 my-4" style="width: 290px;">
+            let pokemonId = pokemon.url.split("/")[6];
+            let template = `<div class="card border-0 jockey-one-regular mx-3 my-4" style="width: 290px;">
         
                 <!--Parte superior-->
                 <div class="border-5 rounded-4 bordeCaja sombreado" style="background-color: rgba(116,203,72,.4);">
@@ -30,4 +32,4 @@ $(document).ready(function () {
         });
       });
     }
-  });
+});
