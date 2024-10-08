@@ -168,13 +168,17 @@ $(document).ready(function(){
 
 
                 function getDescripcion(){
-                    let descripcion = datosAPI.flavor_text_entries[26];
 
-                    let template = `<h3 id="descripcion" class="text-white m-3 jockey-one-regular">
+                    let descripcion = datosAPI.flavor_text_entries.find(p => p.language.name == "es");
+
+                   
+                        let template = `<h3 id="descripcion" class="text-white m-3 jockey-one-regular">
                             ${descripcion.flavor_text.replace(/\n/g," ")}
                         </h3>`
 
-                    $("#descripcion").append(template);
+                        $("#descripcion").append(template);
+                    
+
                 }
             })
         }
