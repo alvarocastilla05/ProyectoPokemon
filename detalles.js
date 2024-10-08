@@ -38,7 +38,7 @@ $(document).ready(function(){
                     let numero = datosAPI.id;
 
                     let template = `<h1 id="nombre" class="text-white text-uppercase me-5" style="font-size: 60px;">${nombre}</h1>
-                        <h1 id="numero" class="text-white ms-5" style="font-size: 60px;">#00${numero}</h1>`
+                        <h1 id="numero" class="text-white ms-5" style="font-size: 60px;">#${numero}</h1>`
                     
                     $("#nombreNumero").append(template);
                 }
@@ -106,6 +106,60 @@ $(document).ready(function(){
 
                 function cambiarPaletaColores(){
                     switch(datosAPI.types[0].type.name){
+                        case "normal":
+                            $("body").attr("style", "background-color: #AAA67F");
+                            $(".stat").attr("style", "color: #AAA67F");
+                            $(".primerTipo").attr("style", "background-color: #AAA67F");
+                            break;
+
+                        case "fighting":
+                            $("body").attr("style", "background-color: #C12239");
+                            $(".stat").attr("style", "color: #C12239");
+                            $(".primerTipo").attr("style", "background-color: #C12239");
+                            break;
+
+                        case "flying":
+                            $("body").attr("style", "background-color: #A891EC");
+                            $(".stat").attr("style", "color: #A891EC");
+                            $(".primerTipo").attr("style", "background-color: #A891EC");
+                            break;
+
+                        case "ground":
+                            $("body").attr("style", "background-color: #DEC16B");
+                            $(".stat").attr("style", "color: #DEC16B");
+                            $(".primerTipo").attr("style", "background-color: #DEC16B");
+                            break;    
+
+                        case "poison":
+                            $("body").attr("style", "background-color: #A43E9E");
+                            $(".stat").attr("style", "color: #A43E9E");
+                            $(".primerTipo").attr("style", "background-color: #A43E9E");
+                            break;
+
+                        case "rock":
+                            $("body").attr("style", "background-color: #B69E31");
+                            $(".stat").attr("style", "color: #B69E31");
+                            $(".primerTipo").attr("style", "background-color: #B69E31");
+                            break;
+
+                        case "bug":
+                            $("body").attr("style", "background-color: #A7B723");
+                            $(".stat").attr("style", "color: #A7B723");
+                            $(".primerTipo").attr("style", "background-color: #A7B723");
+                            break;
+
+                        case "ghost":
+                            $("body").attr("style", "background-color: #70559B");
+                            $(".stat").attr("style", "color: #70559B");
+                            $(".primerTipo").attr("style", "background-color: #70559B");
+                            break;
+
+                        case "steel":
+                            $("body").attr("style", "background-color: #B7B9D0");
+                            $(".stat").attr("style", "color: #B7B9D0");
+                            $(".primerTipo").attr("style", "background-color: #B7B9D0");
+                            break;
+                        
                         case "fire":
                             $("body").attr("style", "background-color: #F57D31");
                             $(".stat").attr("style", "color: #F57D31");
@@ -118,16 +172,46 @@ $(document).ready(function(){
                             $(".primerTipo").attr("style", "background-color: #6493EB");
                             break;
 
-                        case "bug":
-                            $("body").attr("style", "background-color: #A7B723");
-                            $(".stat").attr("style", "color: #A7B723");
-                            $(".primerTipo").attr("style", "background-color: #A7B723");
+                        case "grass":
+                            $("body").attr("style", "background-color: #74CB48");
+                            $(".stat").attr("style", "color: #74CB48");
+                            $(".primerTipo").attr("style", "background-color: #74CB48");
+                            break;
+
+                        case "electric":
+                            $("body").attr("style", "background-color: #F9CF30");
+                            $(".stat").attr("style", "color: #F9CF30");
+                            $(".primerTipo").attr("style", "background-color: #F9CF30");
                             break;
                         
-                        case "normal":
-                            $("body").attr("style", "background-color: #AAA67F");
-                            $(".stat").attr("style", "color: #AAA67F");
-                            $(".primerTipo").attr("style", "background-color: #AAA67F");
+                        case "psychic":
+                            $("body").attr("style", "background-color: #FB5584");
+                            $(".stat").attr("style", "color: #FB5584");
+                            $(".primerTipo").attr("style", "background-color: #FB5584");
+                            break;
+
+                        case "ice":
+                            $("body").attr("style", "background-color: #9AD6DF");
+                            $(".stat").attr("style", "color: #9AD6DF");
+                            $(".primerTipo").attr("style", "background-color: #9AD6DF");
+                            break;
+
+                        case "dragon":
+                            $("body").attr("style", "background-color: #7037FF");
+                            $(".stat").attr("style", "color: #7037FF");
+                            $(".primerTipo").attr("style", "background-color: #7037FF");
+                            break;
+
+                        case "dark":
+                            $("body").attr("style", "background-color: #75574C");
+                            $(".stat").attr("style", "color: #75574C");
+                            $(".primerTipo").attr("style", "background-color: #75574C");
+                            break;
+                        
+                        case "fairy":
+                            $("body").attr("style", "background-color: #E69EAC");
+                            $(".stat").attr("style", "color: #E69EAC");
+                            $(".primerTipo").attr("style", "background-color: #E69EAC");
                             break;
 
                         default:
@@ -137,10 +221,78 @@ $(document).ready(function(){
                     }
 
                     switch(datosAPI.types[1].type.name){
+                        case "normal":
+                            $(".segundoTipo").attr("style", "background-color: #AAA67F");
+                            break;
+
+                        case "fighting":
+                            $(".segundoTipo").attr("style", "background-color: #C12239");
+                            break;
+
                         case "flying":
                             $(".segundoTipo").attr("style", "background-color: #A891EC");
                             break;
 
+                        case "ground":
+                            $(".segundoTipo").attr("style", "background-color: #DEC16B");
+                            break;
+
+                        case "poison":
+                            $(".segundoTipo").attr("style", "background-color: #A43E9E");
+                            break;
+                        
+                        case "rock":
+                            $(".segundoTipo").attr("style", "background-color: #B69E31");
+                            break; 
+
+                        case "bug":
+                            $(".segundoTipo").attr("style", "background-color: #A7B723");
+                            break; 
+
+                        case "ghost":
+                            $(".segundoTipo").attr("style", "background-color: #70559B");
+                            break; 
+
+                        case "steel":
+                            $(".segundoTipo").attr("style", "background-color: #B7B9D0");
+                            break; 
+
+                        case "fire":
+                            $(".segundoTipo").attr("style", "background-color: #F57D31");
+                            break;
+                        
+                        case "water":
+                            $(".segundoTipo").attr("style", "background-color: #6493EB");
+                            break;
+
+                        case "grass":
+                            $(".segundoTipo").attr("style", "background-color: #A43E9E");
+                            break;
+
+                        case "electric":
+                            $(".segundoTipo").attr("style", "background-color: #F9CF30");
+                            break;
+
+                        case "psychic":
+                            $(".segundoTipo").attr("style", "background-color: #FB5584");
+                            break;
+
+                        case "ice":
+                            $(".segundoTipo").attr("style", "background-color: #9AD6DF");
+                            break;
+
+                        case "dragon":
+                            $(".segundoTipo").attr("style", "background-color: #7037FF");
+                            break;
+
+                        case "dark":
+                            $(".segundoTipo").attr("style", "background-color: #75574C");
+                            break;
+
+                        case "fairy":
+                            $(".segundoTipo").attr("style", "background-color: #E69EAC");
+                            break;
+                        
                         default:
                             $(".segundoTipo").attr("style", "background-color: #A43E9E");
                     }
