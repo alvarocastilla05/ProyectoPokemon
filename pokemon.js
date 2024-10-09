@@ -29,14 +29,14 @@ $(document).ready(function () {
                         <h4 class="card-title blanco m-0 text-capitalize">${pokemon.name}</h4>
                     </div>
                     <!--Tipos-->
-                    <div class="me-2" style="width: 35%;">
+                    <!--<div class="me-2" style="width: 35%;">
                         <div class="px-3 rounded-5 fondoPlanta">
                             <p class="text-light text-center mb-2" id="planta">Planta</p>
                         </div>
                         <div class="px-3 rounded-5 fondoVeneno">
                             <p class="text-light text-center mt-1 mb-0" id="veneno">Veneno</p>
                         </div> 
-                    </div>
+                    </div>-->
                 </div>
 
             </div>`;
